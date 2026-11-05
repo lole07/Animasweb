@@ -359,7 +359,7 @@ function route(){var h=decodeURIComponent(location.hash.slice(1)),st=h==='histor
 document.querySelectorAll('.links a[data-tab]').forEach(function(a){a.classList.toggle('on',(a.getAttribute('data-tab')==='story')===st)});
 if(st||!h||h==='inicio'){scrollTo(0,0)}else{var e=$(h);if(e)setTimeout(function(){e.scrollIntoView()},0)}sc()}
 addEventListener('hashchange',route);route();
-var VIDEO_URL='https://www.youtube.com/watch?v=Rt7YnX5gPQE';/* pega aquí el enlace de YouTube del tráiler */
+var VIDEO_URL='https://www.youtube.com/watch?v=eICpmmJsKjk';/* pega aquí el enlace de YouTube del tráiler */
 var m=VIDEO_URL.match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([\w-]{11})/),vid=m?m[1]:'';
 $('tvp').src=document.querySelector('#hero>img').src;
 if(!vid){$('tvm').textContent='SIN SEÑAL · EL TRÁILER LLEGA PRONTO';$('tvb').disabled=true}else{$('tvm').textContent='PULSA PLAY';$('tvl').innerHTML='<a href="https://www.youtube.com/watch?v='+vid+'" target="_blank" rel="noopener" style="color:var(--amber)">Ver en YouTube ↗</a>';$('tvb').onclick=function(){$('tvs').innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+vid+'?autoplay=1&rel=0" title="'+T('Tráiler de El Camino de las Ánimas')+'" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>'}}})();
